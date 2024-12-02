@@ -1,24 +1,38 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const IamRich());
 }
 
-class MyApp extends StatelessWidget {
+class IamRich extends StatelessWidget {
+  const IamRich({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('I Am Rich'),
-          backgroundColor: Colors.blueGrey[900],
-        ),
-        backgroundColor: Colors.blueGrey,
-        body: Center(
-          child: Image(
-            image:
-                AssetImage('assets/images/diamond.png'), 
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.amber.shade700,
+          appBar: AppBar(
+            backgroundColor: Colors.amber.shade900,
+            title: const Text(
+              "I am Rich",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            centerTitle: true,
+          ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                Image(
+                  image: AssetImage("assets/images/diamond.png"),
+                  width: 330,
+                )
+              ],
+            ),
           ),
         ),
       ),
