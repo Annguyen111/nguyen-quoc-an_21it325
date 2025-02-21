@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 void main() {
   return runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,  
       home: Scaffold(
         backgroundColor: Colors.red,
         appBar: AppBar(
@@ -46,7 +47,7 @@ class _DicePageState extends State<DicePage> {
               onPressed: () {
                 dicee();
               },
-              child: Image.asset('images/dice$leftDiceNumber.png'),
+              child: Image.asset('assets/images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
@@ -54,7 +55,7 @@ class _DicePageState extends State<DicePage> {
               onPressed: () {
                 dicee();
               },
-              child: Image.asset('images/dice$rightDiceNumber.png'),
+              child: Image.asset('assets/images/dice$rightDiceNumber.png'),
             ),
           ),
         ],

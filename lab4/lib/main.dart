@@ -4,12 +4,13 @@ import 'dart:math';
 // Creates a Material App
 void main() => runApp(
       MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: BallPage(),
       ),
     );
 
 // Creates a Scaffold with
-// appbar using Stateless widget 
+// appbar using Stateless widget
 class BallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class BallPage extends StatelessWidget {
   }
 }
 
-// Creates a Stateful widget 
+// Creates a Stateful widget
 class Ball extends StatefulWidget {
   const Ball({Key? key}) : super(key: key);
 
